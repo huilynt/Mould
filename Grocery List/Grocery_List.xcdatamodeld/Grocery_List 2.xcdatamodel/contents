@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ExpiryDate" representedClassName="ExpiryDate" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="pantry" maxCount="1" deletionRule="Nullify" destinationEntity="PantryItem" inverseName="expiry" inverseEntity="PantryItem" syncable="YES"/>
+    </entity>
+    <entity name="GroceryItemCD" representedClassName="GroceryItemCD" syncable="YES" codeGenerationType="class">
+        <attribute name="important" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="quantity" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PantryItem" representedClassName="PantryItem" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quantity" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="expiry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExpiryDate" inverseName="pantry" inverseEntity="ExpiryDate" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GroceryItemCD" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="PantryItem" positionX="-63" positionY="9" width="128" height="120"/>
+        <element name="ExpiryDate" positionX="-54" positionY="36" width="128" height="75"/>
+    </elements>
+</model>

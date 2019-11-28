@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DUn-xZ-hEp">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date Popup View Controller-->
+        <scene sceneID="Cm6-cq-ayM">
+            <objects>
+                <viewController storyboardIdentifier="DatePoppup" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DUn-xZ-hEp" customClass="DatePopupViewController" customModule="GroceryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="eXf-SW-vch">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jf4-0G-eWy">
+                                <rect key="frame" x="0.0" y="568" width="414" height="294"/>
+                                <subviews>
+                                    <stackView contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-hB-6Ma">
+                                        <rect key="frame" x="20" y="20" width="374" height="254"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="163" translatesAutoresizingMaskIntoConstraints="NO" id="TlX-HP-l7D">
+                                                <rect key="frame" x="27" y="0.0" width="320" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQn-1H-TWG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                                        <state key="normal" title="Cancel"/>
+                                                        <connections>
+                                                            <action selector="btnCancel:" destination="DUn-xZ-hEp" eventType="touchUpInside" id="4Fo-2O-ek2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRh-64-p7a">
+                                                        <rect key="frame" x="272" y="0.0" width="48" height="30"/>
+                                                        <state key="normal" title="Add"/>
+                                                        <connections>
+                                                            <action selector="btnAdd:" destination="DUn-xZ-hEp" eventType="touchUpInside" id="n2b-eJ-Wzb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="DRh-64-p7a" firstAttribute="width" secondItem="dQn-1H-TWG" secondAttribute="width" id="HXK-s1-puA"/>
+                                                </constraints>
+                                            </stackView>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rMk-MF-Rt8">
+                                                <rect key="frame" x="27" y="38" width="320" height="216"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="569148383.71476102">
+                                                    <!--2019-01-14 08:46:23 +0000-->
+                                                </date>
+                                                <locale key="locale" localeIdentifier="en_SG"/>
+                                            </datePicker>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="TlX-HP-l7D" firstAttribute="width" secondItem="rMk-MF-Rt8" secondAttribute="width" id="3Yq-RB-qPS"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="v4b-hB-6Ma" firstAttribute="top" secondItem="jf4-0G-eWy" secondAttribute="top" constant="20" id="3fp-w7-LCk"/>
+                                    <constraint firstItem="v4b-hB-6Ma" firstAttribute="leading" secondItem="jf4-0G-eWy" secondAttribute="leading" constant="20" id="5Co-HS-6wI"/>
+                                    <constraint firstAttribute="trailing" secondItem="v4b-hB-6Ma" secondAttribute="trailing" constant="20" id="ZnF-yb-nxP"/>
+                                    <constraint firstAttribute="bottom" secondItem="v4b-hB-6Ma" secondAttribute="bottom" constant="20" id="i7W-AK-OSM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FcI-xt-ind" firstAttribute="trailing" secondItem="jf4-0G-eWy" secondAttribute="trailing" id="7fg-Jl-rHX"/>
+                            <constraint firstItem="jf4-0G-eWy" firstAttribute="leading" secondItem="FcI-xt-ind" secondAttribute="leading" id="cck-f8-uwQ"/>
+                            <constraint firstItem="FcI-xt-ind" firstAttribute="bottom" secondItem="jf4-0G-eWy" secondAttribute="bottom" id="iyD-3F-FS3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FcI-xt-ind"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="rMk-MF-Rt8" id="Pl7-sb-meI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNI-Cy-gPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>
